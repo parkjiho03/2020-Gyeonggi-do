@@ -1,0 +1,849 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+a {
+    text-decoration:none;
+    color:#000;
+}
+
+ul {
+    display:flex;
+}
+
+li {
+    list-style:none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* 헤더 */
+#header {
+    width:100%;
+    height:70px;
+    background-color:transparent;
+    position:absolute;
+    display:flex;
+    z-index:3;
+}
+
+.hHeader,
+.header {
+    width:100%;
+    height:70px;
+    position:sticky;
+    background-color:#fff;
+    border-bottom: 1px solid #e9edf0;
+    top:0;
+    left:0;
+    z-index:2;
+}
+
+.hHeader {
+    display:flex;
+}
+
+.hHeader > .logoContainer {
+    width:30%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    padding-left:35px;
+}
+
+.hHeader > .logoContainer > a {
+    color:#000;
+}
+
+.hHeader > ul {
+    width:70%;
+    height:100%;
+}
+
+.hHeader > ul > li {
+    width:calc(100%/8);
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-transform:uppercase;
+}
+
+header > .leftHeader {
+    width:50%;
+    height:100%;
+}
+
+header > .leftHeader > .logoContainer {
+    display:flex;
+    align-items:center;
+    margin:0 50px;
+    height:100%;
+}
+
+header > .rightHeader {
+    width:50%;
+    height:100%;
+}
+
+.headerContainer {
+    width:80%;
+    height:100%;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.headerContainer > ul {
+    width:60%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.headerContainer > ul > li {
+    width:calc(100%/7);
+    text-align:center;
+    text-transform:uppercase;
+}
+
+header > .rightHeader > ul {
+    height:100%;
+    width:100%;
+}
+
+header > .rightHeader > ul > li {
+    display:flex;
+    align-items:center;
+    height:100%;
+    margin:0 35px;
+}
+
+header > .rightHeader > ul > li > a {
+    text-transform:uppercase;
+}
+
+.nowWeb {
+    color:#000;
+    font-weight:bold;
+}
+
+.logo {
+    font-weight:bold;
+    color:#fff;
+    text-transform:uppercase;
+    font-size:25px;
+}
+/* 헤더 끝 */
+
+/* 비주얼 */
+#visual {
+    width:100%;
+    height:100vh;
+    display:flex;
+    position:relative;
+}
+
+.visualBgImg {
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.visualBgImg > figure {
+    position:relative;
+    height:600%;
+    margin:0;
+    left:0;
+    bottom:0;
+    animation: 15s main infinite;
+}
+
+.visualBgImg > figure > img {
+    width:100%;
+    height:100vh;
+    float:left;
+    position:relative;
+}
+
+@keyframes main {
+	0% {
+		top: 0;
+	}
+	20% {
+		top: 0;
+	}
+	25% {
+		top: -100%;
+	}
+	45% {
+		top: -100%;
+	}
+	50% {
+		top: -200%;
+	}
+	70% {
+		top: -200%;
+	}
+	75% {
+		top: -300%;
+	}
+	95% {
+		top: -300%;
+	}
+	100% {
+		top: -400%;
+	}
+}
+
+.visualText {
+    width:50%;
+    height:100%;
+    background-color:transparent;
+    position:relative;
+}
+
+.visualText > h1 {
+    position:absolute;
+    text-transform:uppercase;
+    font-size:80px;
+    letter-spacing:30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    top:50%;
+    left:50%;
+    color:#fff;
+    transform:translate(-50%, -50%);
+}
+
+.visualTXT {
+    writing-mode: vertical-rl;
+    color:#fff;
+    font-weight:bold;
+    position:absolute;
+    left:65%;
+    top:50%;
+    transform:translate(-50%, -55%);
+}
+
+.visualImgNow {
+    position: absolute;
+    width:100%;
+    height:100px;
+    bottom:0;
+    left:0;
+    padding:0 300px;
+    display:flex;
+}
+
+.visualImgNow > p {
+    float:left;
+    transform:rotate(-90deg);
+    text-align:center;
+    font-weight:bold;
+    font-size:20px;
+    color:#fff;
+}
+
+.visualNows {
+    height:100px;
+    display:flex;
+    padding:10px 40px;
+}
+
+.visualNow {
+    width:5px;
+    height:5px;
+    background-color:#000;
+    border-radius:10em;
+    margin:0 8px;
+    margin-top:3px;
+}
+
+.now {
+    width:10px;
+    height:10px;
+    margin-top:0;
+    background-color:#fff;
+}
+
+.visualContainer {
+    width:50%;
+    height:100%;
+    background-color:#fff;
+    display:flex;
+    z-index:2;
+}
+
+.leftVisual {
+    width:45%;
+    height:100%;
+    padding-left:80px;
+    padding-top:150px;
+    position:relative;
+}
+
+.visualTitle {
+    width:100%;
+    margin-bottom:30px;
+}
+
+.visualTitle > h2 {
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.visualTitle > p {
+    color:#aaa;
+}
+
+.visualImgContainer {
+    width:330px;
+    height:330px;
+    position:relative;
+    overflow:hidden;
+}
+
+.visualImg {
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:-400%;
+}
+
+.visualImg > figure {
+    position:relative;
+	height:600%;
+	margin: 0;
+    left: 0;
+    animation: 15s slider infinite;
+}
+
+.visualImg > figure > img {
+    width:180%;
+    height:330px;
+    float:left;
+    text-align:right;
+    position:relative;
+    right:79%;
+}
+
+.angleContainer {
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.angleLeft,
+.angleRight {
+    width:30px;
+    height:30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid #000;
+    border-radius:30px;
+    cursor:pointer;
+    margin:10px;
+}
+
+.angleLeft > i,
+.angleRight > i {
+    font-size:20px;
+}
+
+.rightVisual {
+    width:55%;
+    height:100%;
+}
+
+@keyframes slider {
+	0% {
+		bottom: 0;
+	}
+	20% {
+		bottom: 0;
+	}
+	25% {
+		bottom: -100%;
+	}
+	45% {
+		bottom: -100%;
+	}
+	50% {
+		bottom: -200%;
+	}
+	70% {
+		bottom: -200%;
+	}
+	75% {
+		bottom: -300%;
+	}
+	95% {
+		bottom: -300%;
+	}
+	100% {
+		bottom: -400%;
+	}
+}
+/* 비주얼 끝 */
+
+/* 회원가입 */
+.signBg {
+    width:100%;
+    height:100vh;
+    background-color:rgba(0,0,0,0.7);
+    z-index:3;
+    position:fixed;
+    left:0;
+    top:0;
+    display:none;
+}
+
+.registerContainer {
+    position:fixed;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    width:500px;
+    height:600px;
+    background-color:#fff;
+    z-index:5;
+    padding:30px;
+    display:none;
+    border-radius:5px;
+}
+
+.rClose,
+.lClose {
+    position:absolute;
+    top:30px;
+    right:30px;
+    cursor:pointer;
+}
+
+.registerInput > input {
+    outline:none;
+    margin:10px 5px;
+}
+
+.rId,
+.rPassword,
+.captcha,
+.rName {
+    width:100%;
+    padding:6px;
+    border:0;
+    border:1px solid #999;
+    border-radius:5px;
+}
+
+.registerBtn {
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.registerInput > canvas {
+    margin-top:10px;
+    background-color:#f3f3f3;
+}
+
+.registerBtn > button {
+    cursor:pointer;
+    border:0;
+    background-color:#000;
+    color:#fff;
+    border-radius:5px;
+    padding:8px;
+    outline:none;
+}
+
+.loginContainer {
+    position:fixed;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    width:500px;
+    height:300px;
+    background-color:#fff;
+    z-index:5;
+    padding:30px;
+    display:none;
+    border-radius:5px;
+}
+
+.loginInput > input {
+    width:100%;
+    padding:5px;
+    margin:10px 5px;
+    border:1px solid #999;
+    border-radius:5px;
+    outline:none;
+}
+
+.loginBtn {
+    width:100%;
+    height:120px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.loginBtn > button {
+    cursor:pointer;
+    border:0;
+    background-color:#000;
+    color:#fff;
+    border-radius:5px;
+    padding:8px;
+    outline:none;
+}
+/* 로그인 */
+
+/* 온라인 집들이 */
+#house {
+    width:100%;
+    height:auto;
+}
+
+.writingModal {
+    width:500px;
+    height:600px;
+    background-color:#fff;
+    border-radius:5px;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    z-index:3;
+    padding:30px;
+    padding-top:40px;
+    display:none;
+}
+
+.wClose {
+    position:absolute;
+    right:20px;
+    top:20px;
+    cursor:pointer;
+}
+
+.writingInput {
+    width:100%;
+}
+
+.writingInput > input {
+    margin:10px 5px;
+}
+
+.writingInput > textarea {
+    margin:10px 5px;
+    width:100%;
+    resize:none;
+    outline:none;
+    padding:5px;
+    border:1px solid #999;
+    border-radius:5px;
+}
+
+.writingBtn {
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.writingBtn > button {
+    border:0;
+    background-color:#000;
+    color:#fff;
+    border-radius:5px;
+    padding:8px;
+    cursor:pointer;
+    outline:none;
+}
+
+/* 전문가 */
+#special {
+    width:60%;
+    height:auto;
+    margin:0 auto;
+    background-color:#fff;
+    border-right:1px solid #ddd;
+    border-left:1px solid #ddd;
+    padding-bottom:100px;
+}
+
+.specialHeader {
+    width:100%;
+    padding:20px;
+}
+
+.specialContainer {
+    width:75%;
+    height:120px;
+    display:flex;
+    margin:0 auto;
+}
+
+.specialContainer > figure {
+    width:100px;
+    height:100px;
+    border-radius:10em;
+    overflow:hidden;
+}
+
+.specialContainer > figure > img {
+    position:relative;
+    bottom:15px;
+    width:100%;
+}
+
+.specialInfo {
+    width:200px;
+    height:100px;
+    text-align:center;
+    padding:20px 0;
+}
+
+.specialGrade {
+    width:200px;
+    height:100px;
+    text-align:center;
+    padding:20px 0;
+}
+
+.specialStar > i {
+    color:coral;
+    margin:0 3px;   
+}
+
+.specialBtns {
+    width:300px;
+    height:100px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.specialWrapper {
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:10px 0;
+}
+
+.specialBtn {
+    cursor:pointer;
+    border-radius:5px;
+    border:none;
+    outline:none;
+    background-color:#000;
+    color:#fff;
+    padding:5px;
+}
+
+.specialistPopup {
+    position:fixed;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    width:500px;
+    height:350px;
+    background-color:#fff;
+    z-index:5;
+    padding:30px;
+    border-radius:5px;
+    display:none;
+}
+
+.specialistPopup > i,
+.reviewForm > i,
+.reviewPopup > i,
+.reviewView > i {
+    position:absolute;
+    right:30px;
+    top:30px;
+    cursor:pointer;
+}
+
+.specialistInput > input,
+.reviewInput > input {
+    width:100%;
+    margin:10px 0;
+    padding:3px;
+    border-radius:3px;
+    border:1px solid #adadad;
+    outline:none;
+}
+
+.specialistBtn {
+    width:100%;
+    height:100px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.specialistBtn > input {
+    cursor:pointer;
+    color:#fff;
+    border:none;
+    background-color:#000;
+    border-radius:5px;
+    padding:5px;
+    outline:none;
+}
+
+/* 시공 견적 */
+#reviewContainer {
+    width:100%;
+    height:auto;
+}
+
+.reviewBtn,
+.reviewLook,
+.reviewGo {
+    border:none;
+    cursor:pointer;
+    background-color:#000;
+    color:#fff;
+    outline:none;
+    padding:5px;
+    border-radius:5px;
+}
+
+.reviewForm,
+.reviewPopup,
+.reviewView {
+    position:fixed;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    width:500px;
+    height:250px;
+    background-color:#fff;
+    z-index:5;
+    padding:30px;
+    border-radius:5px;
+    display:none;
+}
+
+.reviewButton {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    height:80px;
+}
+
+.reviewButton > input {
+    color:#fff;
+    background-color:#000;
+    border:none;
+    border-radius:5px;
+    padding:5px;
+    cursor:pointer;
+    outline:none;
+}
+
+.reviewViewForm {
+    display:flex;
+    margin:10px 0;
+}
+
+.reviewViewForm > div {
+    margin:0 10px;
+}
+
+.reviewViewBtn > input {
+    background-color:#000;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    outline:none;
+    padding:5px;
+    cursor:pointer;
+}
+
+/* 푸터 */
+footer {
+    width:100%;
+    height:250px;
+    padding:30px 20px;
+    background-color: #3c3d41;
+    display:flex;
+}
+
+.footerWrapper {
+    padding:10px 25px;
+    border-left:1px solid rgba(255, 255, 255, 0.10);
+}
+
+.footerWrapper:first-child {
+    border:none;
+}
+
+.footerWrapper > h4 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    color:#fff;
+}
+
+.footerMenuWrapper {
+    display:flex;
+}
+
+.footerMenu {
+    width:300px;
+    padding:0 10px;
+}
+
+.footerMenu > ul {
+    display:block;
+}
+
+.footerMenu > ul > li {
+    padding:5px 0;
+}
+
+.footerMenu > ul > li > a {
+    color:#fff;
+    font-size:14px;
+}
+
+.footer_Menu {
+    text-transform:capitalize;
+}
+
+.footerText > p {
+    font-size:12px;
+    color:rgba(255, 255, 255, 0.70);
+}
+
+.footerText > p:first-child {
+    margin:10px 0;
+}
+
+.footerMenu > ul > li > a {
+    color:#fff;
+    display:flex;
+}
+
+.footerMenu > ul > li > a > i {
+    font-size:20px;
+    padding-right:15px;
+}
